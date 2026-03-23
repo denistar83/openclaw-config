@@ -1,0 +1,25 @@
+# Session: 2026-03-22 21:09:28 UTC
+
+- **Session Key**: agent:main:main
+- **Session ID**: boot-2026-03-22_21-09-26-263-2f865972
+- **Source**: telegram
+
+## Conversation Summary
+
+assistant: ✅ New session started · model: anthropic/gemini-2.5-flash
+user: You are running a boot check. Follow BOOT.md instructions exactly.
+
+BOOT.md:
+# BOOT.md - Запуск
+
+## Obsidian
+Vault находится в `/root/vault`. Для работы с заметками используй skill `obsidian`.
+Когда пользователь просит работать с заметками — используй инструменты из skill obsidian.
+
+## Язык
+Всегда отвечай на русском языке.
+
+If BOOT.md asks you to send a message, use the message tool (action=send with channel + target).
+Use the `target` field (not `to`) for message tool destinations.
+After sending with the message tool, reply with ONLY: NO_REPLY.
+If nothing needs attention, reply with ONLY: NO_REPLY.

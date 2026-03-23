@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-19T18:05:21.304Z"
+  },
+  "env": {
+    "OPENAI_API_KEY": "REPLACE_WITH_REAL_KEY",
+    "GROQ_API_KEY": "REPLACE_WITH_REAL_KEY"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-19T17:12:47.827Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "gcli2api/gemini-2.5-flash",
+        "fallbacks": [
+          "gcli2api/gemini-2.5-pro"
+        ]
+      },
+      "models": {
+        "gcli2api/gemini-2.5-flash": {},
+        "gcli2api/gemini-2.5-pro": {}
+      },
+      "memorySearch": {
+        "enabled": true
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "BSAK1hFMaRRNokKZVFU1j73zFuuy1bO"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "bootstrap-extra-files": {
+          "enabled": true,
+          "paths": [
+            "MEMORY.md",
+            "memory/*.md"
+          ]
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8577998599:AAGolq5ExFRCWQrtp785DBeQE0Z1zpibl5g",
+      "groupAllowFrom": [
+        "408657877"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "my-secret-password"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "memory-core": {
+        "enabled": true
+      }
+    }
+  }
+}
